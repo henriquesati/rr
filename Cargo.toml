@@ -1,6 +1,5 @@
 [workspace]
 members = [
-    "xxx",
     "projetos/tradutor-binario"
 
 ]
