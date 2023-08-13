@@ -29,3 +29,49 @@ use tradutor_binario::lib::*;
              String::from("1010011110101000101011")
         );
     }
+    #[test]
+    fn bin_float_test1(){
+        let result = from_dec(String::from("bin"), Num::Float(100.0625));
+        assert_eq!(
+            result,
+            String::from("1100100,0001")
+        )
+    }
+    #[test]
+    fn oct_test1(){
+        let result = from_dec(String::from("oct"), Num::Int(100));
+        assert_eq!(
+            result,
+            String::from("144")
+        )
+
+    }
+
+    #[test]
+    fn oct_test2(){
+        let result = from_dec(String::from("oct"), Num::Int(573648));
+        assert_eq!(
+            result,
+            String::from("2140320")
+        )
+
+    }
+    #[test]
+    fn hex_test1(){
+        let result = from_dec(String::from("hex"), Num::Int(573648));
+        assert_eq!(
+            result,
+            String::from("8C0D0")
+        )
+
+    }
+    #[test]
+    fn hex_test2(){
+        let result = from_dec(String::from("hex"), Num::Int(1837));
+        assert_eq!(
+            result,
+            String::from("72D")
+        )
+
+    }
+
