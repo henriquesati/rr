@@ -1,3 +1,4 @@
+
 pub mod lib{
     use std::collections::HashMap;
     
@@ -11,7 +12,7 @@ pub mod lib{
         Int(i128),
         Float(f64)
     }
-    fn hidrated(input: String) -> Decimal {
+    pub fn hidrated(input: String) -> Decimal {
         let inputref: &str = input.as_str();
         let value: Decimal = Decimal::from_str(inputref).unwrap();
         return value
@@ -198,4 +199,12 @@ pub mod lib{
         let result: String  = vetor_binario.iter().map(|&num| num.to_string()).collect::<Vec<String>>().join("");
         return result;
     }
+    }
+
+    pub mod teste{
+        use crate::lib::*;
+
+        pub fn teste1 (){
+            println!("hello world teste");
+        }
     }
